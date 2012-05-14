@@ -1,25 +1,54 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
-<head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+    <head>
+        <meta charset="utf-8">
+        <title>ng:cookbook</title>
+        <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
 
-  <div ng-view></div>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="span12">
+                        <a href="#" class="brand">ng:cookbook</a>
+                        <ul class="nav">
+                            <li class="active"><a href="">home</a></li>
+                            <li><a href="">link</a></li>
+                            <li><a href="">link</a></li>
+                        </ul>
+                        <form class="navbar-search pull-right span2">
+                            <input type="text" name="search" class="search-query">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+        <div class="container">
+            <ul class="span3">
+                <li><a href="#/view1">view1</a></li>
+                <li><a href="#/view2">view2</a></li>
+            </ul>
 
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-</body>
+            <div class="span9" ng-view>
+
+            </div>
+
+            <div class="navbar navbar-fixed-bottom">
+                <div class="container">
+                    <div class="span12">Angular seed app: v<span app-version></span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="lib/angular/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+    </body>
 </html>
