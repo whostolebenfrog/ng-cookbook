@@ -19,10 +19,19 @@
                 <span class="error help-inline" ng-show="jobForm.age.$error.required">age is required</span>
             </div>
         </div>
+        <div class="control-group">
+            <label class="control-label">toggle switch</label>
+            <div class="controls">
+                <ul class="nav nav-pills">
+                    <li ng-class="state && 'active'" ng-click="updateState(true)"> <a href="">on</a> </li>
+                    <li ng-class="!state && 'active'" ng-click="updateState(false)"> <a href="">off</a> </li>
+                </ul>
+            </div>
+        </div>
+
 
     </fieldset>
 
     <div ng-show="!jobForm.$valid" class="alert alert-error">Form is invalid</div>
- 
     <div ng-show="jobForm.$valid" class="alert alert-success">Form is valid</div>
 </form>
