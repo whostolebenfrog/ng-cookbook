@@ -1,0 +1,28 @@
+<h2>Form example</h2>
+
+<form name="jobForm" class="form-horizontal">
+
+    <fieldset id="user_details">
+        <legend>user details</legend>
+        
+        <div class="control-group">
+            <label class="control-label" for="name">name</label>
+            <div class="controls">
+                <input type="text" name="name" ng-model="name" required>
+                <span class="error help-inline" ng-show="jobForm.name.$error.required">name is required</span>  
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="age">age</label>
+            <div class="controls">
+                <input type="number" name="age" ng-model="age" required min="18" max="30">
+                <span class="error help-inline" ng-show="jobForm.age.$error.required">age is required</span>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <div ng-show="!jobForm.$valid" class="alert alert-error">Form is invalid</div>
+ 
+    <div ng-show="jobForm.$valid" class="alert alert-success">Form is valid</div>
+</form>
