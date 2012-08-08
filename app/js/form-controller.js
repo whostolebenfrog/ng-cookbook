@@ -7,4 +7,12 @@ function FormController($scope) {
     $scope.updateState = function(newState) {
         $scope.state = newState;
     };
+
+    $scope.disFunc = function() {
+        return true;
+    }
+
+    $scope.sayHi = function() {
+        alert("hi");
+    }
 }
